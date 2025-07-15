@@ -1,0 +1,43 @@
+# Configuration for Fake News Detection Project
+
+# Model Configuration
+model:
+  name: "bert-base-uncased"
+  max_length: 512
+  num_labels: 2
+
+# Training Configuration
+training:
+  batch_size: 16
+  learning_rate: 2e-5
+  num_epochs: 3
+  warmup_steps: 500
+  weight_decay: 0.01
+  gradient_accumulation_steps: 1
+
+# Data Configuration
+data:
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+  random_seed: 42
+
+# Augmentation Configuration
+augmentation:
+  methods: ["back_translation", "synonym_replacement", "paraphrasing"]
+  augmentation_ratio: 0.5
+  max_augmented_samples: 1000
+  
+# Paths
+paths:
+  data_dir: "./data"
+  raw_data_dir: "./data/raw"
+  processed_data_dir: "./data/processed"
+  model_dir: "./models"
+  results_dir: "./results"
+  
+# Logging
+logging:
+  use_wandb: false
+  project_name: "fake-news-detection"
+  log_dir: "./logs"
