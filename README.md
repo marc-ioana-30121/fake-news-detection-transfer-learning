@@ -56,6 +56,3 @@ fake_news_detection/
 - LIAR: A benchmark dataset for fake news detection
 - FakeNewsNet: A comprehensive dataset of fake and real news
 
-## Contact
-
-Your project for exploring transfer learning in textual data augmentation.
